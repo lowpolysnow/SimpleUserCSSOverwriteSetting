@@ -1,0 +1,49 @@
+# CSS定義のみ取り出し
+name: export-css
+
+on:
+  # 手動実行
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Ubuntuで実行(release-action用にパーミッション調整)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # $GITHUB_WORKSPACE上へチェックアウト
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 全タグ・ブランチ・履歴をdepth:0で取得
+      
+      # タグをHEADへ移動
+      - name: Move tag to HEAD(master)
+        run: |
+          git push origin :refs/tags/export-css
+          git tag -f export-css
+          git push origin export-css
+
+      # npmモジュールをインストールして、export-cssを実行
+      - name: Install npm modules and Run export-css
+        run: |
+          npm i comment-json
+          npm i fs
+          node action/export-css.js
+
+      # Artifactを生成(＆zip圧縮)して、Actionページへアップロード
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: export-css
+          path: ./destcss/
+      
+      # Artifactのうち、CSSファイルをexport-cssタグのリリースページへアップロード (2022-07-17現在、公式のリリース用アクションは無く、こちらが案内されている。)
+      - name: Upload a built CSS file in Artifact(unzip) to Release page(export-css tag)
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: ./destcss/*.css
+          tag: "export-css"
+          token: ${{secrets.GITHUB_TOKEN}}
+

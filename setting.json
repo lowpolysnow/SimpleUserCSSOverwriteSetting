@@ -1,0 +1,122 @@
+[
+  {
+    "apply": true,
+    "name": "Microsoft docs,code",
+    "url": "(https\\:\\/\\/)(.*)((code\\.visualstudio\\.com)|(docs\\.microsoft\\.com))(.*)",
+    "css": "/* remはhtmlのサイズから相対 */\n/* emは親要素のサイズから相対 */\n\nh2{\n\tfont-weight: bold !important;\n  color: #00979D !important;\n  /* border-left: 9px solid #00979D !important; */\n  /* border-bottom: 1px solid #00979D !important; */\n  padding: 2px 0 2px 0.1em !important;\n\tmargin-top: 1em !important;\n\tmargin-bottom: 0.5em !important;\n\tbackground-color: lightsteelblue;\n}\n\n/* h3なし？ */\nh3{\n\tfont-weight: bold !important;\n  color: #00979D !important;\n  border-left: 9px solid #00979D !important;\n  border-bottom: 1px solid #00979D !important;\n  padding: 2px 0 2px 0.5em !important;\n\tmargin-top: 1em !important;\n\tmargin-bottom: 0.5em !important;\n}\n\nh4{\n\tfont-weight: bold !important;\n  color: #EC9122 !important;\n  border-left: 9px solid #EC9122 !important;\n  border-bottom: 1px solid #EC9122 !important;\n  padding: 2px 0 2px 0.5em !important;\n\tmargin-top: 1em !important;\n\tmargin-bottom: 0.5em !important;\n}\nh5{\n\tcolor: #EC9122 !important;\n\ttext-decoration-line: underline !important;\n\ttext-decoration-color: grey !important;\n\tfont-weight: bold !important;\n\t/* margin-top: 1em !important; */\n\t/* margin-bottom: 0.5em !important; */\n}\nh6{\n\ttext-decoration-line: underline !important;\n\ttext-decoration-color: grey !important;\n\tfont-weight: bold !important;\n\t/* margin-top: 1em !important; */\n\t/* margin-bottom: 0.5em !important; */\n}\np{\n  /* font-size: 16px !important; */\n  line-height: 1.4 !important;\n  /* margin-top: 16px !important; */\n  /* margin-bottom: 16px !important; */\n  /* font-family: Segoe UI,BIZ UDゴシック !important; */\n}\n\nli{\n  /* font-size: 16px !important; */\n  line-height: 1.4 !important;\n  /* margin-top: 16px !important; */\n  /* margin-bottom: 16px !important; */\n  /* font-family: Segoe UI,BIZ UDゴシック !important; */\n}\n\nspan.ts{\n  padding: 3px 8px 3px 8px !important;\n}\nspan.ts::before{\n  top:10px !important;\n}\n\n.details{\n  padding: 3px 8px 3px 8px !important;\n  margin-bottom: 0.5em !important;\n}\n/* blockquote {\n  margin-top: 16px !important;\n  margin-bottom: 16px !important;\n  line-height: 1.5 !important;\n  padding: 0.5em !important;\n  padding-top: 0.5em !important;\n  padding-right: 0 !important;\n  padding-bottom: 0.5em !important;\n  padding-left: 0.5em !important;\n} */\n\n"
+  },
+  {
+    "apply": true,
+    "name": "confluence",
+    "url": "(https\\:\\/\\/)(.*)(\\.atlassian\\.net\\/)(wiki)(.*)",
+    "css": "/* 記事本文のデコレーション */\n.wiki-content h1, #content-body h1 {\n\t/* font-weight: bold; */\n\t/* text-decoration-line: underline; */\n\t/* text-decoration-color: darkgray; */\n\n\tborder-bottom: 1px solid #00979D !important;\n  padding: 2px 0 2px 0 !important;\n\tmargin-top: 1em !important;\n\tmargin-bottom: 0.5em !important;\n\tbackground-color: lightsteelblue;\n\n}\n.wiki-content h2, #content-body h2 {\n\tfont-weight: bold;\n\t/* text-decoration-line: underline; */\n\t/* text-decoration-color: darkgray; */\n\n\tcolor: #00979D !important;\n  border-left: 9px solid #00979D !important;\n  border-bottom: 1px solid #00979D !important;\n  padding: 2px 0 2px 0.5em !important;\n\tmargin-top: 1em !important;\n\tmargin-bottom: 0.5em !important;\n\n}\n.wiki-content h3, #content-body h3 {\n\tfont-weight: bold;\n\ttext-decoration-line: underline;\n\ttext-decoration-color: darkgray;\n\n\tcolor: #EC9122 !important;\n\tfont-weight: bold !important;\n\tmargin-top: 1em !important;\n\tmargin-bottom: 0.5em !important;\n}\n.wiki-content h4, #content-body h4 {\n\tfont-weight: bold;\n\ttext-decoration-line: underline;\n\ttext-decoration-color: darkgray;\n\n\t/* color: #EC9122 !important; */\n\t/* font-weight: bold !important; */\n\tmargin-top: 1em !important;\n\tmargin-bottom: 0.5em !important;\n}\n\n/* 左メニュー ---------------------------------------------------------------- */\n/* 左メニュー　アイテム */\na[data-testid=\"page-tree-item\"]{\n\theight: 1.75em !important;\n\t/* padding-left: 0px !important; *//* これ有効にすると、インデントが無くなる */\n\tpadding-right: 0px !important;\n}\na[data-testid=\"page-tree-item\"] span[data-item-elem-after=\"true\"]{\n\tmargin-left: 0px !important;\n}\n\n/* 左メニュー　アイテムのボタンのサイズを行高さに合わせる */\ndiv[role=\"presentation\"]>a{\n\theight: 1.75em !important;\n}\n\n/* 左メニュー　アイテムの左スペースを除去 */\ndiv[role=\"group\"]>div:nth-child(1){\n\tmargin-left: 0px !important;\n}\n\n/* 左メニュー　Spaceタイトルを最小限のサイズにする */\nnav[aria-label=\"Space\"]>div:nth-of-type(1){\n  display: contents !important;\n}\n/* 左メニュー　Overviewを除去 */\n[data-testid=\"space-navigation-overview-link\"]{\n  display: none !important;\n}\n/* 左メニュー　Blogを除去 */\n[data-testid=\"space-navigation-blog-link--item\"]{\n  display: none !important;\n}\n/* 左メニュー　Space Settingsを除去 */\n[data-testid=\"space-navigation-space-settings\"]{\n  display: none !important;\n}\n/* 左メニュー　Space Shortcutsを除去 */\n[data-ds--menu--heading-item=\"true\"]~a{\n  display: none !important;\n}\n\n/* 左メニューのサイズ変更グラブ範囲を細くする */\nbutton[data-testid=\"grid-left-sidebar-grab-area\"]{\n\twidth:2px !important;\n}\n\n/* その他 ---------------------------------------------------------------- */\n/* 記事全体の端の余白 */\n.wrapper-space-view-page>div>div{\n\tpadding:0px 16px 8px !important;\n}\n\n"
+  },
+  {
+    "apply": true,
+    "name": "jira",
+    "url": "(https\\:\\/\\/)(.*)(\\.atlassian\\.net\\/)(browse|issues|secure|jira)(.*)",
+    "css": "/* 工数入力ダイアログのTIPS表示を除去 */\n/* <div role=\"tooltip\" class=\"Tooltip  css-1d4esjr\" data-placement=\"bottom\"></div> */\ndiv[role=\"tooltip\"]{\n  display:none !important;\n}\n\n/* ---------------------------------------------------------------- */\n/* 右メニュー　全体　のヘッダー */\n[data-test-id=\"issue.views.issue-details.issue-layout.right-most-column\"]{\n  padding: 2px 2px 2px 2px !important;\n}\n[data-test-id=\"issue.views.issue-base.context.status-and-approvals-wrapper.status-and-approval\"]>div{\n  padding: 0px !important;\n}\n[data-test-id=\"issue.common.component.resizer.handle.resizer\"]{\n  width: 8px !important;\n}\n\n/* ---------------------------------------------------------------- */\n/* 右メニュー　Pinned fields　のヘッダー */\n/* $$('[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.pinned-context-items\"]').forEach(e=>{e.style.height='1.5em';}); */\n/* 右メニュー　Pinned fields　の各項目の隙間 */\n/* $$('[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.pinned-context-items\"]+div').forEach(e=>{e.style.padding='0px';}); */\n/*  */\n/* 右メニュー　Pinned fields　の各項目の項目ごとの隙間 */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"] div').forEach(e => {e.style.marginBottom='0px';} ); */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"] div').forEach(e => {e.style.paddingTop='0px'}); */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"] div').forEach(e => {e.style.paddingRight='0px'}); */\n/*  */\n/* 右メニュー　Pinned fields　の各項目の項目ごとの罫線 */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"]>div').forEach(e => {e.style.border='solid 1px #eeeeee';} ); */\n\n/* 右メニュー　Pinned fields　のヘッダー行高さを狭くする */\n[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.pinned-context-items\"]{\n  height:1.5em !important;\n  padding:0px !important;\n}\n/* 右メニュー　Pinned fields　の各項目の隙間を狭くする */\n[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.pinned-context-items\"]+div{\n  padding:0px !important;\n}\n\n/* 右メニュー　Pinned fields　の各項目の項目ごとの隙間を狭くする */\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"] div{\n  margin-bottom:0px !important;\n}\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"] div{\n  padding-top:0px !important;\n}\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"] div{\n  padding-right:0px !important;\n}\n\n/* 右メニュー　Pinned fields　の各項目の項目ごとの罫線を表示する */\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.pinned-context-items\"]>div{\n  border:solid 1px #eeeeee !important;\n}\n\n/* ---------------------------------------------------------------- */\n/* 右メニュー　Details　のヘッダー */\n/* $$('[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.details-group\"]').forEach(e=>{e.style.height='1.5em';}); */\n/* 右メニュー　Details　の各項目の隙間 */\n/* $$('[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.details-group\"]+div').forEach(e=>{e.style.padding='0px';}); */\n/*  */\n/* 右メニュー　Details　の各項目の項目ごとの不要な隙間 */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"] div').forEach(e => {e.style.marginBottom='0px';} ); */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"] div').forEach(e => {e.style.paddingTop='0px'}); */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"] div').forEach(e => {e.style.paddingRight='0px'}); */\n/*  */\n/* 右メニュー　Details　の各項目の項目ごとの罫線 */\n/* $$('[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"]>div').forEach(e => {e.style.border='solid 1px #eeeeee';} ); */\n\n/* 右メニュー　Details　のヘッダー行高さを狭くする */\n[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.details-group\"]{\n  height:1.5em !important;\n}\n/* 右メニュー　Details　の各項目の隙間を狭くする */\n[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.details-group\"]+div{\n  padding:0px !important;\n}\n\n/* 右メニュー　Details　の各項目の項目ごとの隙間を狭くする */\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"] div{\n  margin-bottom:0px !important;\n}\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"] div{\n  padding-top:0px !important;\n}\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"] div{\n  padding-right:0px !important;\n}\n\n/* 右メニュー　Details　の各項目の項目ごとの罫線を表示する */\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group\"]>div{\n  border:solid 1px #eeeeee !important;\n}\n\n\n/* 右メニュー　More field　のヘッダー行高さを狭くする */\n[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.secondary-context-items\"]{\n  height:1.5em !important;\n}\n/* 右メニュー　More field　の各項目の隙間を狭くする */\n[data-test-id=\"issue-view-layout-group.common.ui.collapsible-group-factory.secondary-context-items\"]+div{\n  padding:0px !important;\n}\n\n/* 右メニュー　More field　の各項目の項目ごとの隙間を狭くする */\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.secondary-context-items\"] div{\n  margin-bottom:0px !important;\n}\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.secondary-context-items\"] div{\n  padding-top:0px !important;\n}\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.secondary-context-items\"] div{\n  padding-right:0px !important;\n}\n\n/* 右メニュー　More field　の各項目の項目ごとの罫線を表示する */\n[data-test-id=\"issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.secondary-context-items\"]>div{\n  border:solid 1px #eeeeee !important;\n}\n\n/* ---------------------------------------------------------------- */\n/* 記事の周りの隙間 */\n/* $$('[data-test-id=\"issue.views.issue-details.issue-layout.left-most-column\"]').forEach(e => {e.style.padding='4px 4px 4px 16px';}); */\n/*  */\n/* サイドバーのグラブ範囲を調整 */\n/* $$('[data-testid=\"ContextualNavigation-grab-area\"]').forEach(e => {e.style.width='2px';}); */\n\n/* 記事の周りの隙間を狭くする */\n[data-test-id=\"issue.views.issue-details.issue-layout.left-most-column\"]{\n  padding:4px 4px 4px 16px !important;\n}\n\n/* サイドバーのサイズ変更グラブ範囲を細くする */\n[data-testid=\"ContextualNavigation-grab-area\"]{\n  width:2px !important;\n}\n\n\n/* ------------------------------------------------------------ */\n/* ボード表示 */\n/* 各チケットのグラブ要素を非表示 */\n/* $$('div[class=\"ghx-grabber\"]') */\n/*  */\n/* 各チケットの隙間を狭くする */\n/* $$('div[class*=\"ghx-issue\"]') */\n/* 各チケットのLabel等が持っているマージンを狭くする */\n/* $$('div[class*=\"ghx-issue\"]>section') */\n\n/* 各チケットのグラブ要素を非表示 */\ndiv[class=\"ghx-grabber\"]{\n  display: none !important;\n}\n\n/* 各チケットの隙間を狭くする */\ndiv.ghx-issue{\n  padding: 4px 4px 4px 6px !important;\n}\n\n/* 各チケットのLabel等が持っているマージンを調整を狭くする */\ndiv.ghx-issue>section{\n  margin-top: 0px !important;\n}\n/* 各チケットのAssine等が持っているマージンを調整を狭くする */\ndiv.ghx-row{\n  margin-top: 0px !important;\n}\n\n/* ボードの上部のスペースを狭くする */\ndiv[data-testid*=\"rapidboard-breadcrumbs\"]{\n  margin-top: 2px !important;\n  margin-left: 15px !important;\n}\n/* ボード本体のスペースを狭くする */\ndiv[class*=\"z-index-content\"]{\n  margin-left: 15px !important;\n}\ndiv[id=\"ghx-pool-column\"]{\n  padding-right: 16px !important;\n}\n\n/* ボード本体のカラム名部分のスペースを狭くする */\nli[class*=\"ghx-column\"]{\n  padding-top: 0px !important;\n  padding-bottom: 6px !important;\n}\n/* ボード本体のカラム名部分のスペースを狭くするのに伴い、カードが隙間から除くので、それを補正←もう不要。 */\ndiv[class*=\"ghx-swimlane-header\"]{\n  top:24px !important;\n}\n/* ボード */\ndiv[class*=\"ghx-heading\"]{\n  margin: 4px 0 !important;\n}\n\n/* ボード上部のメニュー部分 */\n/* div id=\"ghx-header\" class=\"contains-breadcrumbs\" */\ndiv[class=\"contains-breadcrumbs\"]{\n  display: none !important;\n}\n\n\n/* ---------------------------------------------------------------- */\n/* ダッシュボードの表示 */\n\n/*ヘッダー部分*/\nheader[data-test-id=\"dashboard-internal-common.ui.dashboard-content.header.dashboard-header\"]>div>div:nth-of-type(1)>div>div{\n  margin: 2px 0px 2px !important;\n}\nheader[data-test-id=\"dashboard-internal-common.ui.dashboard-content.header.dashboard-header\"]>div>div:nth-of-type(2)>div>div{\n  margin: 2px 0px 2px !important;\n}\n/* Activityを多段表示したときの各アイテムの隙間を削除 */\ndiv[class=\"activity-item-summary\"]{\n  padding-top: 0 !important;\n}\n\n/* Activityを多段表示したときの各アイテム内の隙間を削除 */\ndiv[class=\"activity-item-description\"]{\n  margin-top: 0 !important;\n}\ndiv[class=\"activity-item-description\"]>blockquote{\n  margin-bottom: 0 !important;\n}\ndiv[class=\"activity-item-info\"]{\n  margin-top: 0 !important;\n}\n\n/* Activityの各アイテムのタイトルを強調表示 */\ndiv[class=\"activity-item-summary\"]{\n  color: brown !important;\n  /*font-weight: bold !important;*/\n}\n\n/* ボード全体の隙間を狭くする */\nmain[data-test-id=\"dashboard-internal-common.ui.dashboard-content.layout.container-wrapper\"]{\n  margin: 0px -80px 0px -32px !important;\n}\n\n/* 各段間の隙間を削除 */\nmain[data-test-id=\"dashboard-internal-common.ui.dashboard-content.layout.container-wrapper\"]>div>div:nth-of-type(1){\n  margin: 0px !important;\n}\nmain[data-test-id=\"dashboard-internal-common.ui.dashboard-content.layout.container-wrapper\"]>div>div:nth-of-type(2){\n  margin: 0px !important;\n}\nmain[data-test-id=\"dashboard-internal-common.ui.dashboard-content.layout.container-wrapper\"]>div>div:nth-of-type(3){\n  margin: 0px !important;\n}\n\n/* 各段の中の隙間を削除 */\nmain[data-test-id=\"dashboard-internal-common.ui.dashboard-content.layout.container-wrapper\"]>div>div:nth-of-type(1)>div>div>div>div:nth-of-type(1){\n  margin: 0px !important;\n  padding: 2px !important;\n}\nmain[data-test-id=\"dashboard-internal-common.ui.dashboard-content.layout.container-wrapper\"]>div>div:nth-of-type(2)>div>div>div>div:nth-of-type(1){\n  margin: 0px !important;\n  padding: 2px !important;\n}\nmain[data-test-id=\"dashboard-internal-common.ui.dashboard-content.layout.container-wrapper\"]>div>div:nth-of-type(3)>div>div>div>div:nth-of-type(1){\n  margin: 0px !important;\n  padding: 2px !important;\n}\n\n/* 各段の中の隙間を削除 */\ndiv[class=\"activity-stream-container full-view not-configurable\"]{\n  padding: 0px !important;\n}\n\n\n/* ------------------------------------------------------------ */\n/* バックログの残り時間を非表示 */\n/* 別プロジェクトのチケットは残り時間の項目名が異なるためこれで消えない */\n[class=\"ghx-plan-extra-fields ghx-plan-extra-fields-1 ghx-row\"]{\n  display: none !important;\n}\n[class=\"ghx-plan-extra-fields ghx-plan-extra-fields-2 ghx-row\"]{\n  display: none !important;\n}\n[class=\"ghx-plan-extra-fields ghx-plan-extra-fields-3 ghx-row\"]{\n  display: none !important;\n}\n\n\n/* ------------------------------------------------------------ */\n/* フィルターによる検索結果 */\n\n/* 行間に罫線を引く */\n/*table[id=issuetable] tr.issuerow{\n  border:solid 1px #eeeeee !important;\n}*/\n\n/* 親チケット列のhiddenを解除 */\ntable[id=issuetable] td.parent>p{\n  white-space: normal !important;\n}\n\n/* 各セルの設定 */\ntable[id=issuetable] td{\n  word-break: break-all !important; /* 各列の改行位置を「どこでも」へ変更する */\n  border:solid 1px #eeeeee !important; /* 全セルに罫線を引く */\n  padding: 4px 6px !important; /* 隙間を縮める。 */\n}\n\n/* スプリント列の幅を小さくして、はみ出た分は非表示にする */\ntable[id=issuetable] td.customfield_10006{\n  text-overflow: ellipsis !important;\n  max-width: 150px !important;\n  white-space: nowrap !important;\n  overflow: hidden !important;\n}\n\n/* 担当者列の幅を小さくして、はみ出た分は非表示にする */\ntable[id=issuetable] td.assignee{\n  text-overflow: ellipsis !important;\n  max-width: 100px !important;\n  white-space: nowrap !important;\n  overflow: hidden !important;\n}\n/*table[id=issuetable] td.assignee>span{\n  white-space: nowrap !important;\n}*/\n\n/* ヘッダー部分の余白を縮める */\n.saved-search-selector{\n  padding: 2px 24px 2px 0px !important;\n}\n"
+  },
+  {
+    "apply": true,
+    "name": "slide share",
+    "url": "(https\\:\\/\\/)(.*)(\\.slideshare\\.net\\/)(.*)",
+    "css": "/* スライドのぼかしを削除 */\n.limit-overlay{\n  display: none !important;\n}\n"
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  },
+  {
+    "apply": false,
+    "name": "",
+    "url": "",
+    "css": ""
+  }
+]
